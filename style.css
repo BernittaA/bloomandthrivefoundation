@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@600;700&display=swap');
-:root{--green:#205044;--dark:#17372f;--cream:#fcfaf4;--pale:#eaf1e9;--peach:#d99a73;--muted:#65736e}
+:root{--green:#6B8E6B;--dark:#3D4F3D;--cream:#FDFBF7;--pale:#F5F0E8;--peach:#E8A0A0;--muted:#7A8A7A}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--dark);font-family:DM Sans,sans-serif;line-height:1.65}
 header{height:80px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fcfaf4f5;backdrop-filter:blur(8px);z-index:5;border-bottom:1px solid #e8e3d8}
 .logo{display:flex;gap:9px;align-items:center;text-decoration:none;color:var(--green);font-weight:700;line-height:1}.logo:first-letter{color:var(--peach)}.logo small{font-size:10px;letter-spacing:2px;text-transform:uppercase}
