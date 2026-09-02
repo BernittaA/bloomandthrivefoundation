@@ -6,11 +6,174 @@
 <title>Bloom & Thrive Foundation</title>
 <meta name="description" content="Bloom & Thrive Foundation — improving the health and wellbeing of girls and women through education, health talks, screenings and community outreach.">
 <link rel="stylesheet" href="style.css">
+
+<style>
+.work-gallery {
+  background: #fff;
+  padding: 90px 7%;
+}
+.gallery-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  line-height: 1.7;
+}
+.gallery-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+.gallery-item img {
+  width: 100%;
+  height: 330px;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.gallery-feature {
+  grid-column: span 2;
+}
+.gallery-feature img {
+  height: 460px;
+}
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+.gallery-caption {
+  padding: 20px 22px 22px;
+}
+.gallery-caption h3 {
+  margin: 0 0 8px;
+}
+.gallery-caption p {
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .work-gallery {
+    padding: 65px 5%;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-feature {
+    grid-column: span 1;
+  }
+  .gallery-item img,
+  .gallery-feature img {
+    height: 300px;
+  }
+}
+</style>
+
+
+<style>
+.work-gallery {
+  background: #fff;
+  padding: 90px 7%;
+}
+.work-gallery > h2,
+.work-gallery > .eyebrow,
+.gallery-intro {
+  text-align: center;
+}
+.gallery-intro {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  line-height: 1.7;
+}
+.gallery-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 35px rgba(0,0,0,.09);
+}
+.gallery-item img {
+  width: 100%;
+  height: 330px;
+  display: block;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.gallery-feature {
+  grid-column: span 2;
+}
+.gallery-feature img {
+  height: 500px;
+}
+.gallery-item:hover img {
+  transform: scale(1.025);
+}
+.gallery-caption {
+  padding: 20px 22px 22px;
+}
+.gallery-caption h3 {
+  margin: 0 0 8px;
+}
+.gallery-caption p {
+  margin: 0;
+  line-height: 1.6;
+}
+.work-video {
+  max-width: 1000px;
+  margin: 85px auto 0;
+  text-align: center;
+}
+.video-frame {
+  margin-top: 35px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+  background: #111;
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+}
+@media (max-width: 700px) {
+  .work-gallery {
+    padding: 65px 5%;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-feature {
+    grid-column: span 1;
+  }
+  .gallery-item img,
+  .gallery-feature img {
+    height: 300px;
+  }
+  .work-video {
+    margin-top: 60px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
   <a class="logo" href="#home">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
-  <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#values">Values</a><a href="#get-involved">Get Involved</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#our-work">See Our Work</a><a href="#values">Values</a><a href="#get-involved">Get Involved</a><a href="#contact">Contact</a></nav>
 </header>
 
 <section class="hero" id="home">
@@ -43,6 +206,59 @@
     <article><b>03</b><h3>Bloom Health Talks</h3><p>Community-based health education sessions led by women health professionals.</p></article>
     <article><b>04</b><h3>Bloom Screen</h3><p>Basic health screenings such as blood pressure checks, anaemia awareness, and referrals.</p></article>
     <article><b>05</b><h3>Bloom Care</h3><p>Dignity support including sanitary pad distribution, hygiene packs, and health resources.</p></article>
+  </div>
+</section>
+
+
+<section id="our-work" class="work-gallery">
+  <p class="eyebrow">SEE OUR WORK</p>
+  <h2>Real people. Real communities. Real impact.</h2>
+  <p class="gallery-intro">A glimpse of Bloom & Thrive Foundation's work creating safe spaces, sharing health education and supporting girls and women in our communities.</p>
+
+  <div class="gallery-grid">
+    <article class="gallery-item gallery-feature">
+      <img src="images/community-outreach.jpg" alt="Bloom & Thrive Foundation community outreach with women and girls">
+      <div class="gallery-caption">
+        <h3>Community Outreach</h3>
+        <p>Connecting with women and girls through community-based initiatives.</p>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <img src="images/bloom-girls.jpg" alt="Girls participating in a Bloom & Thrive Foundation session">
+      <div class="gallery-caption">
+        <h3>Bloom Girls</h3>
+        <p>Creating safe spaces for girls to learn, ask questions and build confidence.</p>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <img src="images/women-supporting-women.jpg" alt="Women supporting women through Bloom & Thrive Foundation">
+      <div class="gallery-caption">
+        <h3>Women Supporting Women</h3>
+        <p>Building a community where women can learn, connect and thrive.</p>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <img src="images/girl-talk.jpg" alt="Girl Talk periods and self-care health education event">
+      <div class="gallery-caption">
+        <h3>Girl Talk: Periods &amp; Self-Care</h3>
+        <p>Promoting menstrual health, self-care and access to sanitary supplies.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="work-video">
+    <p class="eyebrow">WATCH OUR WORK</p>
+    <h2>See Bloom &amp; Thrive in action.</h2>
+    <p class="gallery-intro">Watch a glimpse of our work, community activities and the people we are privileged to serve.</p>
+    <div class="video-frame">
+      <video controls playsinline preload="metadata">
+        <source src="videos/bloom-thrive-community.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
   </div>
 </section>
 
