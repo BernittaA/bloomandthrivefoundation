@@ -81,11 +81,77 @@
   object-fit: contain;
 }
 
-/* Contact Section & Email Styling */
-.email-link {
-  margin-top: 10px;
+/* Combined Get Involved & Contact Section Styling */
+.combined-contact-section {
+  padding: 90px 7%;
+  background-color: #faf5f7;
+  text-align: center;
+}
+.cta-grid {
+  max-width: 1150px;
+  margin: 40px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cta-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.1);
+}
+.cta-card-icon {
+  font-size: 36px;
+  color: #d81b60;
+  margin-bottom: 18px;
+}
+.cta-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #222;
+}
+.cta-card p {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+.cta-btn {
   display: inline-block;
-  color: #333;
+  padding: 12px 24px;
+  background-color: #d81b60;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #b0124a;
+}
+
+/* Direct Contact Info Divider */
+.direct-contact-box {
+  border-top: 1px solid #e2d5dc;
+  padding-top: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.email-link {
+  margin-top: 12px;
+  display: inline-block;
+  color: #222;
+  font-size: 18px;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -94,7 +160,7 @@
   color: #d81b60;
 }
 
-/* Social Media Section Styling */
+/* Social Media Icons Styling */
 .social-links {
   margin-top: 25px;
   display: flex;
@@ -106,19 +172,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background-color: #f3f4f6;
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
   color: #333;
   border-radius: 50%;
   font-size: 20px;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 .social-icon:hover {
-  background-color: #e2e8f0;
-  color: #d81b60;
+  background-color: #d81b60;
+  color: #fff;
   transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
@@ -145,7 +218,7 @@
 
 <header>
   <a class="logo" href="#home">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
-  <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#our-work">See Our Work</a><a href="#values">Values</a><a href="#get-involved">Get Involved</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#our-work">See Our Work</a><a href="#values">Values</a><a href="#contact">Get Involved</a></nav>
 </header>
 
 <section class="hero" id="home">
@@ -250,33 +323,55 @@
   <div class="timeline"><div><b>Quarterly</b><p>Health talks on rotating women’s health themes.</p></div><div><b>Bi-Annual</b><p>Community health screening events.</p></div><div><b>Annual</b><p>Adolescent girls’ health and dignity outreach with pad distribution.</p></div></div>
 </section>
 
-<section class="cta" id="get-involved">
-  <p class="eyebrow">JOIN THE MOVEMENT</p><h2>Help create more spaces where women can thrive.</h2>
-  <p>Get involved through volunteering, partnership, community participation or supporting our work.</p>
-  <a class="button light" href="#contact">Get involved</a>
-</section>
+<!-- Combined Get Involved & Contact Section -->
+<section class="combined-contact-section" id="contact">
+  <p class="eyebrow">JOIN THE MOVEMENT</p>
+  <h2>Get Involved & Connect With Us</h2>
+  <p class="gallery-intro">Help us create more spaces where women can thrive. Choose how you'd like to support or reach out directly.</p>
 
-<section id="contact">
-  <p class="eyebrow">CONTACT US</p><h2>Let’s grow healthier communities together.</h2>
-  <div class="contact-note">
-    Bloom & Thrive Foundation<br>
-    <span>bloomandthrivefoundation.org</span><br>
+  <div class="cta-grid">
+    <div class="cta-card">
+      <div class="cta-card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      <h3>Volunteer With Us</h3>
+      <p>Share your skills, time, or medical expertise in our community outreach events and health sessions.</p>
+      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Volunteer%20Inquiry" class="cta-btn">Become a Volunteer</a>
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-card-icon"><i class="fa-solid fa-handshake"></i></div>
+      <h3>Partner With Us</h3>
+      <p>Collaborate with us as an organization, corporate sponsor, or community leader to expand our reach.</p>
+      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Partnership%20Inquiry" class="cta-btn">Partner With Us</a>
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-card-icon"><i class="fa-solid fa-box-open"></i></div>
+      <h3>Support Our Work</h3>
+      <p>Contribute dignity kits, sanitary supplies, or financial support to keep our programs running.</p>
+      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Support%20and%20Donations" class="cta-btn">Support Us</a>
+    </div>
+  </div>
+
+  <!-- Direct Email & Social Media -->
+  <div class="direct-contact-box">
+    <h3>Have a general question?</h3>
+    <p>Reach out directly to our team or connect with us on social media:</p>
     <a href="mailto:hello@bloomandthrivefoundation.org" class="email-link">
       <i class="fa-regular fa-envelope"></i> hello@bloomandthrivefoundation.org
     </a>
-  </div>
 
-  <!-- Social Media Icons -->
-  <div class="social-links">
-    <a href="https://www.instagram.com/bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/share/1Dbghth14x/" target="_blank" class="social-icon" aria-label="Facebook">
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
-    <a href="https://www.tiktok.com/@bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="TikTok">
-      <i class="fa-brands fa-tiktok"></i>
-    </a>
+    <!-- Social Media Icons -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1Dbghth14x/" target="_blank" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.tiktok.com/@bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
   </div>
 </section>
 
