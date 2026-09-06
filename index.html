@@ -7,83 +7,13 @@
 <meta name="description" content="Bloom & Thrive Foundation — improving the health and wellbeing of girls and women through education, health talks, screenings and community outreach.">
 <link rel="stylesheet" href="style.css">
 
-<style>
-.work-gallery {
-  background: #fff;
-  padding: 90px 7%;
-}
-.gallery-intro {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  text-align: center;
-  line-height: 1.7;
-}
-.gallery-grid {
-  max-width: 1150px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.gallery-item {
-  margin: 0;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
-}
-.gallery-item img {
-  width: 100%;
-  height: 330px;
-  display: block;
-  object-fit: contain;
-  transition: transform .35s ease;
-}
-.gallery-feature {
-  grid-column: span 2;
-}
-.gallery-feature img {
-  height: 460px;
-}
-.gallery-item:hover img {
-  transform: scale(1.03);
-}
-.gallery-caption {
-  padding: 20px 22px 22px;
-}
-.gallery-caption h3 {
-  margin: 0 0 8px;
-}
-.gallery-caption p {
-  margin: 0;
-  line-height: 1.6;
-}
-@media (max-width: 700px) {
-  .work-gallery {
-    padding: 65px 5%;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-  .gallery-feature {
-    grid-column: span 1;
-  }
-  .gallery-item img,
-  .gallery-feature img {
-    height: 300px;
-  }
-}
-</style>
-
+<!-- Font Awesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 .work-gallery {
   background: #fff;
   padding: 90px 7%;
-}
-.work-gallery > h2,
-.work-gallery > .eyebrow,
-.gallery-intro {
   text-align: center;
 }
 .gallery-intro {
@@ -123,6 +53,7 @@
 }
 .gallery-caption {
   padding: 20px 22px 22px;
+  text-align: left;
 }
 .gallery-caption h3 {
   margin: 0 0 8px;
@@ -149,6 +80,47 @@
   max-height: 620px;
   object-fit: contain;
 }
+
+/* Contact Section & Email Styling */
+.email-link {
+  margin-top: 10px;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.email-link:hover {
+  color: #d81b60;
+}
+
+/* Social Media Section Styling */
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #f3f4f6;
+  color: #333;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.social-icon:hover {
+  background-color: #e2e8f0;
+  color: #d81b60;
+  transform: translateY(-3px);
+}
+
 @media (max-width: 700px) {
   .work-gallery {
     padding: 65px 5%;
@@ -168,9 +140,9 @@
   }
 }
 </style>
-
 </head>
 <body>
+
 <header>
   <a class="logo" href="#home">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
   <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#our-work">See Our Work</a><a href="#values">Values</a><a href="#get-involved">Get Involved</a><a href="#contact">Contact</a></nav>
@@ -208,7 +180,6 @@
     <article><b>05</b><h3>Bloom Care</h3><p>Dignity support including sanitary pad distribution, hygiene packs, and health resources.</p></article>
   </div>
 </section>
-
 
 <section id="our-work" class="work-gallery">
   <p class="eyebrow">SEE OUR WORK</p>
@@ -287,8 +258,26 @@
 
 <section id="contact">
   <p class="eyebrow">CONTACT US</p><h2>Let’s grow healthier communities together.</h2>
-  <p>Add your official email address, phone number and social media links here before publishing.</p>
-  <div class="contact-note">Bloom & Thrive Foundation<br><span>bloomandthrivefoundation.org</span></div>
+  <div class="contact-note">
+    Bloom & Thrive Foundation<br>
+    <span>bloomandthrivefoundation.org</span><br>
+    <a href="mailto:hello@bloomandthrivefoundation.org" class="email-link">
+      <i class="fa-regular fa-envelope"></i> hello@bloomandthrivefoundation.org
+    </a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="social-links">
+    <a href="https://www.instagram.com/bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1Dbghth14x/" target="_blank" class="social-icon" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://www.tiktok.com/@bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="TikTok">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+  </div>
 </section>
 
 <footer>© 2026 Bloom & Thrive Foundation. All rights reserved.</footer>
