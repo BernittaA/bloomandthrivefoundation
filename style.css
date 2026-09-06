@@ -58,12 +58,11 @@ footer{padding:30px 8%;border-top:1px solid #e4dfd4;color:var(--muted);font-size
 }
 
 .founder-name {
-  font-size: 36px;
-  color: #1a1a1a;
+  font-size: 28px;
+  color: #3d3d3d;
   margin: 0 0 5px 0;
-  font-weight: 700;
+  font-weight: 400;
 }
-
 .founder-title {
   font-size: 18px;
   color: #666666;
