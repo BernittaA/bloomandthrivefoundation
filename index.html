@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,11 +17,13 @@
   padding: 90px 7%;
   text-align: center;
 }
+
 .gallery-intro {
   max-width: 720px;
   margin: 0 auto 42px;
   line-height: 1.7;
 }
+
 .gallery-grid {
   max-width: 1150px;
   margin: 0 auto;
@@ -28,6 +31,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+
 .gallery-item {
   margin: 0;
   overflow: hidden;
@@ -35,6 +39,7 @@
   background: #fff;
   box-shadow: 0 10px 35px rgba(0,0,0,.09);
 }
+
 .gallery-item img {
   width: 100%;
   height: 330px;
@@ -42,31 +47,39 @@
   object-fit: contain;
   transition: transform .4s ease;
 }
+
 .gallery-feature {
   grid-column: span 2;
 }
+
 .gallery-feature img {
   height: 500px;
 }
+
 .gallery-item:hover img {
   transform: scale(1.025);
 }
+
 .gallery-caption {
   padding: 20px 22px 22px;
   text-align: left;
 }
+
 .gallery-caption h3 {
   margin: 0 0 8px;
 }
+
 .gallery-caption p {
   margin: 0;
   line-height: 1.6;
 }
+
 .work-video {
   max-width: 1000px;
   margin: 85px auto 0;
   text-align: center;
 }
+
 .video-frame {
   margin-top: 35px;
   overflow: hidden;
@@ -74,6 +87,7 @@
   box-shadow: 0 12px 40px rgba(0,0,0,.12);
   background: #111;
 }
+
 .video-frame video {
   display: block;
   width: 100%;
@@ -81,72 +95,144 @@
   object-fit: contain;
 }
 
-/* Combined Get Involved & Contact Section Styling */
+/* Combined Get Involved & Contact Section */
+
 .combined-contact-section {
   padding: 90px 7%;
   background-color: #faf5f7;
   text-align: center;
 }
-.cta-grid {
-  max-width: 1150px;
-  margin: 40px auto 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.cta-card {
+
+/* Request Form */
+
+.request-form-container {
+  max-width: 850px;
+  margin: 40px auto 55px;
   background: #fff;
-  border-radius: 18px;
-  padding: 35px 25px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.07);
+  text-align: left;
 }
-.cta-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0,0,0,.1);
+
+.form-group {
+  margin-bottom: 22px;
 }
-.cta-card-icon {
-  font-size: 36px;
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d81b60;
+  box-shadow: 0 0 0 3px rgba(216,27,96,.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.request-submit-btn {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: #d81b60;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease, transform .2s ease;
+}
+
+.request-submit-btn:hover {
+  background-color: #b0124a;
+  transform: translateY(-2px);
+}
+
+.request-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Successful Submission */
+
+.form-success {
+  text-align: center;
+  padding: 45px 25px;
+}
+
+.success-icon {
+  font-size: 58px;
   color: #d81b60;
   margin-bottom: 18px;
 }
-.cta-card h3 {
+
+.form-success h3 {
+  font-size: 28px;
   margin: 0 0 12px;
-  font-size: 20px;
-  color: #222;
+  color: #333;
 }
-.cta-card p {
-  margin: 0 0 24px;
-  font-size: 15px;
-  line-height: 1.6;
+
+.form-success p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
   color: #555;
 }
-.cta-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #d81b60;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
+
+.submit-another-btn {
+  border: none;
+  padding: 12px 25px;
   border-radius: 30px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  background: #d81b60;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
 }
-.cta-btn:hover {
-  background-color: #b0124a;
+
+.submit-another-btn:hover {
+  background: #b0124a;
 }
 
 /* Direct Contact Info Divider */
+
 .direct-contact-box {
   border-top: 1px solid #e2d5dc;
   padding-top: 40px;
   max-width: 700px;
   margin: 0 auto;
 }
+
 .email-link {
   margin-top: 12px;
   display: inline-block;
@@ -156,11 +242,13 @@
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 .email-link:hover {
   color: #d81b60;
 }
 
-/* Social Media Icons Styling */
+/* Social Media Icons */
+
 .social-links {
   margin-top: 25px;
   display: flex;
@@ -168,6 +256,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .social-icon {
   display: inline-flex;
   align-items: center;
@@ -182,43 +271,69 @@
   box-shadow: 0 4px 15px rgba(0,0,0,.06);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
+
 .social-icon:hover {
   background-color: #d81b60;
   color: #fff;
   transform: translateY(-3px);
 }
 
+/* Mobile */
+
 @media (max-width: 900px) {
-  .cta-grid {
+  .form-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
 @media (max-width: 700px) {
+
   .work-gallery {
     padding: 65px 5%;
   }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
+
   .gallery-feature {
     grid-column: span 1;
   }
+
   .gallery-item img,
   .gallery-feature img {
     height: 300px;
   }
+
   .work-video {
     margin-top: 60px;
+  }
+
+  .request-form-container {
+    padding: 28px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-success {
+    padding: 30px 10px;
   }
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <a class="logo" href="#home">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
-  <nav><a href="#about">About</a><a href="#programmes">Our Work</a><a href="#our-work">See Our Work</a><a href="#values">Values</a><a href="#contact">Get Involved</a></nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#programmes">Our Work</a>
+    <a href="#our-work">See Our Work</a>
+    <a href="#values">Values</a>
+    <a href="#contact">Get Involved</a>
+  </nav>
 </header>
 
 <section class="hero" id="home">
@@ -228,6 +343,7 @@
     <p class="intro">A world where every girl and woman has access to health education, preventive care, and the dignity to thrive.</p>
     <a class="button" href="#programmes">Explore our work</a>
   </div>
+
   <div class="hero-card">
     <div class="flower">✿</div>
     <h2>Safe spaces. Better health. Stronger communities.</h2>
@@ -236,166 +352,593 @@
 </section>
 
 <section id="about">
-  <p class="eyebrow">WHO WE ARE</p><h2>Care that empowers.</h2>
+  <p class="eyebrow">WHO WE ARE</p>
+  <h2>Care that empowers.</h2>
+
   <div class="columns">
-    <div><p>The Bloom & Thrive Foundation is a women-led initiative committed to improving the health and wellbeing of girls and women through education, health talks, screenings, and community outreach.</p><p>Bloom exists to ensure that women are not only cared for, but empowered to thrive.</p></div>
-    <div class="box"><h3>Our Vision</h3><p>A world where every girl and woman has access to health education, preventive care, and the dignity to thrive.</p></div>
+    <div>
+      <p>The Bloom & Thrive Foundation is a women-led initiative committed to improving the health and wellbeing of girls and women through education, health talks, screenings, and community outreach.</p>
+      <p>Bloom exists to ensure that women are not only cared for, but empowered to thrive.</p>
+    </div>
+
+    <div class="box">
+      <h3>Our Vision</h3>
+      <p>A world where every girl and woman has access to health education, preventive care, and the dignity to thrive.</p>
+    </div>
   </div>
 </section>
-  <section class="meet-the-founder-section">
-  <div class="founder-container">
-<!-- Left Column: Founder Photo -->
-<div class="founder-image-col">
-  <img src="images/5D2BE67D-5EEF-4FD0-BD31-FBAB4EB98CA3.png" alt="Bernitta Baaba Ampah - Founder of Bloom & Thrive Foundation" class="founder-img">
-</div>
 
-<!-- Right Column: Biography Text -->
-<div class="founder-text-col">
-  <span class="founder-subtitle">🌸 MEET OUR FOUNDER</span>
-  <p class="founder-name" style="font-size: 24px !important; text-transform: none !important; font-weight: 600; color: #3d3d3d; margin: 0 0 5px 0;">Bernitta Baaba Ampah</p>
-  <p class="founder-title">Founder & Registered Nurse</p>
-  
-  <blockquote class="founder-quote">
-    "As a nurse, I created Bloom & Thrive to bridge the gap between clinical care and community outreach, turning health insights into everyday empowerment for girls and women."
-  </blockquote>
-  
-  <p class="founder-bio">
-    Driven by a passion for women’s health, I launched this initiative to break the silence surrounding menstrual and reproductive wellness. By combining her clinical background with community action, she ensures our programs deliver impactful, compassionate, and stigma-free care.
-  </p>
-</div></div></section>
+<section class="meet-the-founder-section">
+
+  <div class="founder-container">
+
+    <!-- Left Column: Founder Photo -->
+    <div class="founder-image-col">
+      <img src="images/5D2BE67D-5EEF-4FD0-BD31-FBAB4EB98CA3.png"
+           alt="Bernitta Baaba Ampah - Founder of Bloom & Thrive Foundation"
+           class="founder-img">
+    </div>
+
+    <!-- Right Column: Biography Text -->
+    <div class="founder-text-col">
+
+      <span class="founder-subtitle">🌸 MEET OUR FOUNDER</span>
+
+      <p class="founder-name"
+         style="font-size: 24px !important; text-transform: none !important; font-weight: 600; color: #3d3d3d; margin: 0 0 5px 0;">
+        Bernitta Baaba Ampah
+      </p>
+
+      <p class="founder-title">Founder & Registered Nurse</p>
+
+      <blockquote class="founder-quote">
+        "As a nurse, I created Bloom & Thrive to bridge the gap between clinical care and community outreach, turning health insights into everyday empowerment for girls and women."
+      </blockquote>
+
+      <p class="founder-bio">
+        Driven by a passion for women’s health, I launched this initiative to break the silence surrounding menstrual and reproductive wellness. By combining my clinical background with community action, I ensure our programmes deliver impactful, compassionate, and stigma-free care.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section class="pale" id="programmes">
-  <p class="eyebrow">OUR PROGRAMMES</p><h2>Practical support, education and prevention.</h2>
+
+  <p class="eyebrow">OUR PROGRAMMES</p>
+  <h2>Practical support, education and prevention.</h2>
+
   <div class="cards">
-    <article><b>01</b><h3>Bloom Girls</h3><p>Adolescent health education including menstrual health, puberty, and confidence building.</p></article>
-    <article><b>02</b><h3>Bloom Women</h3><p>Women’s health education including reproductive health, anaemia awareness, breast health, and mental wellbeing.</p></article>
-    <article><b>03</b><h3>Bloom Health Talks</h3><p>Community-based health education sessions led by women health professionals.</p></article>
-    <article><b>04</b><h3>Bloom Screen</h3><p>Basic health screenings such as blood pressure checks, anaemia awareness, and referrals.</p></article>
-    <article><b>05</b><h3>Bloom Care</h3><p>Dignity support including sanitary pad distribution, hygiene packs, and health resources.</p></article>
+
+    <article>
+      <b>01</b>
+      <h3>Bloom Girls</h3>
+      <p>Adolescent health education including menstrual health, puberty, and confidence building.</p>
+    </article>
+
+    <article>
+      <b>02</b>
+      <h3>Bloom Women</h3>
+      <p>Women’s health education including reproductive health, anaemia awareness, breast health, and mental wellbeing.</p>
+    </article>
+
+    <article>
+      <b>03</b>
+      <h3>Bloom Health Talks</h3>
+      <p>Community-based health education sessions led by women health professionals.</p>
+    </article>
+
+    <article>
+      <b>04</b>
+      <h3>Bloom Screen</h3>
+      <p>Basic health screenings such as blood pressure checks, anaemia awareness, and referrals.</p>
+    </article>
+
+    <article>
+      <b>05</b>
+      <h3>Bloom Care</h3>
+      <p>Dignity support including sanitary pad distribution, hygiene packs, and health resources.</p>
+    </article>
+
   </div>
+
 </section>
 
 <section id="our-work" class="work-gallery">
+
   <p class="eyebrow">SEE OUR WORK</p>
+
   <h2>Real people. Real communities. Real impact.</h2>
-  <p class="gallery-intro">A glimpse of Bloom & Thrive Foundation's work creating safe spaces, sharing health education and supporting girls and women in our communities.</p>
+
+  <p class="gallery-intro">
+    A glimpse of Bloom & Thrive Foundation's work creating safe spaces,
+    sharing health education and supporting girls and women in our communities.
+  </p>
 
   <div class="gallery-grid">
+
     <article class="gallery-item gallery-feature">
-      <img src="images/community-outreach.jpg" alt="Bloom & Thrive Foundation community outreach with women and girls">
+
+      <img src="images/community-outreach.jpg"
+           alt="Bloom & Thrive Foundation community outreach with women and girls">
+
       <div class="gallery-caption">
         <h3>Community Outreach</h3>
         <p>Connecting with women and girls through community-based initiatives.</p>
       </div>
+
     </article>
 
     <article class="gallery-item">
-      <img src="images/bloom-girls.jpg" alt="Girls participating in a Bloom & Thrive Foundation session">
+
+      <img src="images/bloom-girls.jpg"
+           alt="Girls participating in a Bloom & Thrive Foundation session">
+
       <div class="gallery-caption">
         <h3>Bloom Girls</h3>
         <p>Creating safe spaces for girls to learn, ask questions and build confidence.</p>
       </div>
+
     </article>
 
     <article class="gallery-item">
-      <img src="images/women-supporting-women.jpg" alt="Women supporting women through Bloom & Thrive Foundation">
+
+      <img src="images/women-supporting-women.jpg"
+           alt="Women supporting women through Bloom & Thrive Foundation">
+
       <div class="gallery-caption">
         <h3>Women Supporting Women</h3>
         <p>Building a community where women can learn, connect and thrive.</p>
       </div>
+
     </article>
 
     <article class="gallery-item">
-      <img src="images/girl-talk.jpg" alt="Girl Talk periods and self-care health education event">
+
+      <img src="images/girl-talk.jpg"
+           alt="Girl Talk periods and self-care health education event">
+
       <div class="gallery-caption">
         <h3>Girl Talk: Periods &amp; Self-Care</h3>
         <p>Promoting menstrual health, self-care and access to sanitary supplies.</p>
       </div>
+
     </article>
+
   </div>
 
   <div class="work-video">
+
     <p class="eyebrow">WATCH OUR WORK</p>
+
     <h2>See Bloom &amp; Thrive in action.</h2>
-    <p class="gallery-intro">Watch a glimpse of our work, community activities and the people we are privileged to serve.</p>
+
+    <p class="gallery-intro">
+      Watch a glimpse of our work, community activities and the people we are privileged to serve.
+    </p>
+
     <div class="video-frame">
+
       <video controls playsinline preload="metadata">
         <source src="videos/bloom-thrive-community.mp4" type="video/mp4">
         Your browser does not support video playback.
       </video>
+
     </div>
+
   </div>
+
 </section>
 
 <section id="values">
-  <p class="eyebrow">WHAT GUIDES US</p><h2>Our Core Values</h2>
+
+  <p class="eyebrow">WHAT GUIDES US</p>
+
+  <h2>Our Core Values</h2>
+
   <div class="values">
-    <div><h3>Dignity</h3><p>Every woman deserves respectful, stigma-free care.</p></div>
-    <div><h3>Education</h3><p>Knowledge empowers lifelong health choices.</p></div>
-    <div><h3>Prevention</h3><p>Early awareness saves lives.</p></div>
-    <div><h3>Compassion</h3><p>Care delivered with empathy and understanding.</p></div>
-    <div><h3>Community</h3><p>Women supporting women.</p></div>
+
+    <div>
+      <h3>Dignity</h3>
+      <p>Every woman deserves respectful, stigma-free care.</p>
+    </div>
+
+    <div>
+      <h3>Education</h3>
+      <p>Knowledge empowers lifelong health choices.</p>
+    </div>
+
+    <div>
+      <h3>Prevention</h3>
+      <p>Early awareness saves lives.</p>
+    </div>
+
+    <div>
+      <h3>Compassion</h3>
+      <p>Care delivered with empathy and understanding.</p>
+    </div>
+
+    <div>
+      <h3>Community</h3>
+      <p>Women supporting women.</p>
+    </div>
+
   </div>
+
 </section>
 
 <section class="pale">
-  <p class="eyebrow">WHO WE SERVE</p><h2>Focused on girls and women.</h2>
-  <div class="audience"><span>Adolescent girls</span><span>Young women</span><span>Mothers and caregivers</span><span>Underserved women in church and community settings</span></div>
-  <div class="timeline"><div><b>Quarterly</b><p>Health talks on rotating women’s health themes.</p></div><div><b>Bi-Annual</b><p>Community health screening events.</p></div><div><b>Annual</b><p>Adolescent girls’ health and dignity outreach with pad distribution.</p></div></div>
+
+  <p class="eyebrow">WHO WE SERVE</p>
+
+  <h2>Focused on girls and women.</h2>
+
+  <div class="audience">
+    <span>Adolescent girls</span>
+    <span>Young women</span>
+    <span>Mothers and caregivers</span>
+    <span>Underserved women in church and community settings</span>
+  </div>
+
+  <div class="timeline">
+
+    <div>
+      <b>Quarterly</b>
+      <p>Health talks on rotating women’s health themes.</p>
+    </div>
+
+    <div>
+      <b>Bi-Annual</b>
+      <p>Community health screening events.</p>
+    </div>
+
+    <div>
+      <b>Annual</b>
+      <p>Adolescent girls’ health and dignity outreach with pad distribution.</p>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- Combined Get Involved & Contact Section -->
+
 <section class="combined-contact-section" id="contact">
+
   <p class="eyebrow">JOIN THE MOVEMENT</p>
+
   <h2>Get Involved & Connect With Us</h2>
-  <p class="gallery-intro">Help us create more spaces where women can thrive. Choose how you'd like to support or reach out directly.</p>
 
-  <div class="cta-grid">
-    <div class="cta-card">
-      <div class="cta-card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-      <h3>Volunteer With Us</h3>
-      <p>Share your skills, time, or medical expertise in our community outreach events and health sessions.</p>
-      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Volunteer%20Inquiry" class="cta-btn">Become a Volunteer</a>
+  <p class="gallery-intro">
+    Whether you would like to request support, volunteer, partner with us,
+    support our work, or enquire about our programmes, complete the form below
+    and our team will get back to you.
+  </p>
+
+  <!-- Get Involved Request Form -->
+
+  <div class="request-form-container">
+
+    <form id="getInvolvedForm"
+          action="https://formspree.io/f/xljdjdrp"
+          method="POST">
+
+      <div class="form-group">
+
+        <label for="name">Full Name *</label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="email">Email Address *</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="phone">Phone Number</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            autocomplete="tel"
+          >
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="requestType">
+          What would you like to do? *
+        </label>
+
+        <select
+          id="requestType"
+          name="request_type"
+          required
+        >
+
+          <option value="" disabled selected>
+            Please select an option
+          </option>
+
+          <option value="Request Support">
+            Request Support
+          </option>
+
+          <option value="Volunteer">
+            Volunteer With Us
+          </option>
+
+          <option value="Partnership">
+            Partner With Us
+          </option>
+
+          <option value="Donation">
+            Support / Donate
+          </option>
+
+          <option value="Community Programme">
+            Community Programme Enquiry
+          </option>
+
+          <option value="Health Talk">
+            Request a Health Talk
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="message">
+          Your Request *
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Please tell us how we can help or how you would like to get involved..."
+          required
+        ></textarea>
+
+      </div>
+
+      <button
+        type="submit"
+        class="request-submit-btn"
+      >
+        <i class="fa-solid fa-paper-plane"></i>
+        Submit Request
+      </button>
+
+    </form>
+
+    <!-- Success Message -->
+
+    <div
+      id="formSuccess"
+      class="form-success"
+      style="display: none;"
+    >
+
+      <div class="success-icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <h3>Request Submitted!</h3>
+
+      <p>
+        Thank you for contacting Bloom & Thrive Foundation.
+        We have received your request and someone from our team
+        will get back to you as soon as possible.
+      </p>
+
+      <button
+        type="button"
+        onclick="resetRequestForm()"
+        class="submit-another-btn"
+      >
+        Submit Another Request
+      </button>
+
     </div>
 
-    <div class="cta-card">
-      <div class="cta-card-icon"><i class="fa-solid fa-handshake"></i></div>
-      <h3>Partner With Us</h3>
-      <p>Collaborate with us as an organization, corporate sponsor, or community leader to expand our reach.</p>
-      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Partnership%20Inquiry" class="cta-btn">Partner With Us</a>
-    </div>
-
-    <div class="cta-card">
-      <div class="cta-card-icon"><i class="fa-solid fa-box-open"></i></div>
-      <h3>Support Our Work</h3>
-      <p>Contribute dignity kits, sanitary supplies, or financial support to keep our programs running.</p>
-      <a href="mailto:hello@bloomandthrivefoundation.org?subject=Support%20and%20Donations" class="cta-btn">Support Us</a>
-    </div>
   </div>
 
   <!-- Direct Email & Social Media -->
+
   <div class="direct-contact-box">
+
     <h3>Have a general question?</h3>
-    <p>Reach out directly to our team or connect with us on social media:</p>
-    <a href="mailto:hello@bloomandthrivefoundation.org" class="email-link">
-      <i class="fa-regular fa-envelope"></i> hello@bloomandthrivefoundation.org
+
+    <p>
+      Reach out directly to our team or connect with us on social media:
+    </p>
+
+    <a
+      href="mailto:hello@bloomandthrivefoundation.org"
+      class="email-link"
+    >
+      <i class="fa-regular fa-envelope"></i>
+      hello@bloomandthrivefoundation.org
     </a>
 
     <!-- Social Media Icons -->
+
     <div class="social-links">
-      <a href="https://www.instagram.com/bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="Instagram">
+
+      <a
+        href="https://www.instagram.com/bloomandthrivefoundation"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-icon"
+        aria-label="Instagram"
+      >
         <i class="fa-brands fa-instagram"></i>
       </a>
-      <a href="https://www.facebook.com/share/1Dbghth14x/" target="_blank" class="social-icon" aria-label="Facebook">
+
+      <a
+        href="https://www.facebook.com/share/1Dbghth14x/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-icon"
+        aria-label="Facebook"
+      >
         <i class="fa-brands fa-facebook-f"></i>
       </a>
-      <a href="https://www.tiktok.com/@bloomandthrivefoundation" target="_blank" class="social-icon" aria-label="TikTok">
+
+      <a
+        href="https://www.tiktok.com/@bloomandthrivefoundation"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-icon"
+        aria-label="TikTok"
+      >
         <i class="fa-brands fa-tiktok"></i>
       </a>
+
     </div>
+
   </div>
+
 </section>
 
-<footer>© 2026 Bloom & Thrive Foundation. All rights reserved.</footer>
+<footer>
+  © 2026 Bloom & Thrive Foundation. All rights reserved.
+</footer>
+
+<!-- Form Submission JavaScript -->
+
+<script>
+
+const getInvolvedForm = document.getElementById("getInvolvedForm");
+const formSuccess = document.getElementById("formSuccess");
+
+getInvolvedForm.addEventListener("submit", async function(event) {
+
+  event.preventDefault();
+
+  const submitButton =
+    getInvolvedForm.querySelector(".request-submit-btn");
+
+  submitButton.disabled = true;
+
+  submitButton.innerHTML =
+    '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+  const formData = new FormData(getInvolvedForm);
+
+  try {
+
+    const response = await fetch(
+      getInvolvedForm.action,
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      }
+    );
+
+    if (response.ok) {
+
+      getInvolvedForm.style.display = "none";
+
+      formSuccess.style.display = "block";
+
+      formSuccess.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    } else {
+
+      alert(
+        "There was a problem submitting your request. Please try again."
+      );
+
+      submitButton.disabled = false;
+
+      submitButton.innerHTML =
+        '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+    }
+
+  } catch (error) {
+
+    alert(
+      "There was a problem submitting your request. Please check your internet connection and try again."
+    );
+
+    submitButton.disabled = false;
+
+    submitButton.innerHTML =
+      '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+  }
+
+});
+
+function resetRequestForm() {
+
+  getInvolvedForm.reset();
+
+  formSuccess.style.display = "none";
+
+  getInvolvedForm.style.display = "block";
+
+  const submitButton =
+    getInvolvedForm.querySelector(".request-submit-btn");
+
+  submitButton.disabled = false;
+
+  submitButton.innerHTML =
+    '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+  getInvolvedForm.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+}
+
+</script>
+
 </body>
 </html>
+```
