@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Bloom & Thrive Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #faf5f7; }
+header { background: #fff; padding: 20px 7%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+.logo { text-decoration: none; color: #333; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 600; transition: color 0.2s; }
+nav a:hover, nav a.active { color: #d81b60; }
+main { padding: 60px 7%; max-width: 850px; margin: auto; }
+.eyebrow { color: #d81b60; font-weight: bold; font-size: 14px; letter-spacing: 1px; }
+h2 { font-size: 36px; margin-bottom: 20px; color: #222; text-align: center; }
+.request-form-container { background: #fff; padding: 45px; border-radius: 20px; box-shadow: 0 10px 35px rgba(0,0,0,0.07); margin-bottom: 40px; }
+.form-group { margin-bottom: 22px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; box-sizing: border-box; }
+.request-submit-btn { width: 100%; padding: 15px; border: none; border-radius: 30px; background-color: #d81b60; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; }
+.official-details-box { background: #fff; border: 1px solid #e2d5dc; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); margin-top: 40px; }
+.official-details-box h3 { color: #d81b60; margin-top: 0; }
+footer { background: #2c3e50; color: #fff; text-align: center; padding: 30px; margin-top: 50px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow" style="text-align: center;">JOIN THE MOVEMENT</p>
+  <h2>Get Involved & Connect With Us</h2>
+
+  <div class="request-form-container">
+    <form id="getInvolvedForm" action="https://formspree.io/f/xljdjdrp" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Request *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="request-submit-btn">Submit Request</button>
+    </form>
+  </div>
+
+  <!-- Mandatory Google Registration Verification Info Box -->
+  <div class="official-details-box">
+    <h3>Official Organization Information</h3>
+    <p><strong>Organization Name:</strong> Bloom and Thrive Foundation LBG[cite: 4]</p>
+    <p><strong>Company Registration / Charity ID:</strong> CG055120826[cite: 2, 4]</p>
+    <p><strong>Tax Identification Number (TIN):</strong> C0067796532[cite: 4]</p>
+    <p><strong>Physical Address:</strong> House Number 77, Ejuanema Ln Near Lynx Graphix, Tema Community 7, Tema, Greater Accra, Ghana[cite: 4]</p>
+    <p><strong>Digital Address:</strong> GT-077-8972[cite: 4]</p>
+    <p><strong>Email:</strong> thebloomfoundation@gmail.com[cite: 4]</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Bloom & Thrive Foundation LBG. All rights reserved.
+</footer>
+
+</body>
+</html>
