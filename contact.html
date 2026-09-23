@@ -3,76 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us | Bloom & Thrive Foundation</title>
+<title>Get Involved & Contact | Bloom & Thrive Foundation</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #faf5f7; }
-header { background: #fff; padding: 20px 7%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-.logo { text-decoration: none; color: #333; font-weight: bold; display: flex; align-items: center; gap: 10px; }
-nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 600; transition: color 0.2s; }
-nav a:hover, nav a.active { color: #d81b60; }
-main { padding: 60px 7%; max-width: 850px; margin: auto; }
-.eyebrow { color: #d81b60; font-weight: bold; font-size: 14px; letter-spacing: 1px; }
-h2 { font-size: 36px; margin-bottom: 20px; color: #222; text-align: center; }
-.request-form-container { background: #fff; padding: 45px; border-radius: 20px; box-shadow: 0 10px 35px rgba(0,0,0,0.07); margin-bottom: 40px; }
-.form-group { margin-bottom: 22px; }
-.form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; box-sizing: border-box; }
-.request-submit-btn { width: 100%; padding: 15px; border: none; border-radius: 30px; background-color: #d81b60; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; }
-.official-details-box { background: #fff; border: 1px solid #e2d5dc; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); margin-top: 40px; }
-.official-details-box h3 { color: #d81b60; margin-top: 0; }
-footer { background: #2c3e50; color: #fff; text-align: center; padding: 30px; margin-top: 50px; }
-</style>
 </head>
 <body>
 
 <header>
   <a class="logo" href="index.html">✿ <span>Bloom & Thrive<br><small>Foundation</small></span></a>
   <nav>
-    <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="contact.html" class="active">Contact Us</a>
+    <a href="programmes.html">Our Work</a>
+    <a href="contact.html">Get Involved</a>
   </nav>
 </header>
 
-<main>
-  <p class="eyebrow" style="text-align: center;">JOIN THE MOVEMENT</p>
+<section class="combined-contact-section" id="contact" style="padding: 60px 7%;">
+  <p class="eyebrow">JOIN THE MOVEMENT</p>
   <h2>Get Involved & Connect With Us</h2>
+  <p class="gallery-intro">
+    Whether you would like to request support, volunteer, partner with us,
+    support our work, or enquire about our programmes, complete the form below
+    and our team will get back to you.
+  </p>
 
   <div class="request-form-container">
     <form id="getInvolvedForm" action="https://formspree.io/f/xljdjdrp" method="POST">
       <div class="form-group">
         <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel">
+        </div>
       </div>
       <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" required>
+        <label for="requestType">What would you like to do? *</label>
+        <select id="requestType" name="request_type" required>
+          <option value="" disabled selected>Please select an option</option>
+          <option value="Request Support">Request Support</option>
+          <option value="Volunteer">Volunteer With Us</option>
+          <option value="Partnership">Partner With Us</option>
+          <option value="Donation">Support / Donate</option>
+          <option value="Community Programme">Community Programme Enquiry</option>
+          <option value="Health Talk">Request a Health Talk</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="message">Your Request *</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="6" placeholder="Please tell us how we can help or how you would like to get involved..." required></textarea>
       </div>
-      <button type="submit" class="request-submit-btn">Submit Request</button>
+      <div class="form-consent">
+        <label>
+          <input type="checkbox" name="consent" value="I agree that Bloom & Thrive Foundation may use the information I provide to respond to my request." required>
+          <span>I agree that Bloom & Thrive Foundation may use the information I provide to respond to my request.</span>
+        </label>
+      </div>
+      <button type="submit" class="request-submit-btn">
+        <i class="fa-solid fa-paper-plane"></i> Submit Request
+      </button>
     </form>
+
+    <div id="formSuccess" class="form-success" style="display: none;">
+      <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h3>Request Submitted!</h3>
+      <p>
+        Thank you for contacting Bloom & Thrive Foundation.
+        We have received your request and someone from our team
+        will get back to you as soon as possible.
+      </p>
+      <button type="button" onclick="resetRequestForm()" class="submit-another-btn">
+        Submit Another Request
+      </button>
+    </div>
   </div>
 
-  <!-- Mandatory Google Registration Verification Info Box -->
-  <div class="official-details-box">
-    <h3>Official Organization Information</h3>
-    <p><strong>Organization Name:</strong> Bloom and Thrive Foundation LBG</p>
-    <p><strong>Company Registration / Charity ID:</strong> CG055120826</p>
-    <p><strong>Tax Identification Number (TIN):</strong> C0067796532</p>
+  <!-- Mandatory Google Verification Info Box -->
+  <div class="official-details-box" style="background: #fff; border: 1px solid #e2d5dc; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); max-width: 850px; margin: 40px auto 0; text-align: left;">
+    <h3 style="color: #d81b60; margin-top: 0;">Official Organization Information</h3>
+    <p><strong>Organization Name:</strong> Bloom and Thrive Foundation LBG[cite: 4]</p>
+    <p><strong>Company Registration / Charity ID:</strong> CG055120826[cite: 2, 4]</p>
+    <p><strong>Tax Identification Number (TIN):</strong> C0067796532[cite: 4]</p>
     <p><strong>Physical Address:</strong> House Number 77, Ejuanema Ln Near Lynx Graphix, Tema Community 7, Tema, Greater Accra, Ghana[cite: 4]</p>
-    <p><strong>Digital Address:</strong> GT-077-8972</p>
-    <p><strong>Email:</strong> hello@bloomandthrivefoundation.org</p>
+    <p><strong>Digital Address:</strong> GT-077-8972[cite: 4]</p>
+    <p><strong>Email:</strong> thebloomfoundation@gmail.com[cite: 4]</p>
   </div>
-</main>
+
+  <div class="direct-contact-box">
+    <h3>Have a general question?</h3>
+    <p>Reach out directly to our team or connect with us on social media:</p>
+    <a href="mailto:hello@bloomandthrivefoundation.org" class="email-link">
+      <i class="fa-regular fa-envelope"></i> hello@bloomandthrivefoundation.org
+    </a>
+    <div class="social-links">
+      <a href="https://www.instagram.com/bloomandthrivefoundation" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1Dbghth14x/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.tiktok.com/@bloomandthrivefoundation" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   © 2026 Bloom & Thrive Foundation LBG. All rights reserved.
 </footer>
 
+<script>
+const getInvolvedForm = document.getElementById("getInvolvedForm");
+const formSuccess = document.getElementById("formSuccess");
+
+getInvolvedForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const submitButton = getInvolvedForm.querySelector(".request-submit-btn");
+  submitButton.disabled = true;
+  submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+  const formData = new FormData(getInvolvedForm);
+
+  try {
+    const response = await fetch(getInvolvedForm.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      getInvolvedForm.style.display = "none";
+      formSuccess.style.display = "block";
+      formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      alert("There was a problem submitting your request. Please try again.");
+      submitButton.disabled = false;
+      submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+    }
+  } catch (error) {
+    alert("There was a problem submitting your request. Please check your internet connection and try again.");
+    submitButton.disabled = false;
+    submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+  }
+});
+
+function resetRequestForm() {
+  getInvolvedForm.reset();
+  formSuccess.style.display = "none";
+  getInvolvedForm.style.display = "block";
+  const submitButton = getInvolvedForm.querySelector(".request-submit-btn");
+  submitButton.disabled = false;
+  submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Request';
+  getInvolvedForm.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+</script>
+
 </body>
 </html>
+
