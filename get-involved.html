@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Get Involved | Bloom & Thrive Foundation</title>
+
+<meta name="description"
+content="Volunteer, partner with, support or request support from Bloom & Thrive Foundation.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<a class="logo" href="index.html">
+✿ <span>Bloom & Thrive<br><small>Foundation</small></span>
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="programmes.html">Our Programmes</a>
+<a href="our-work.html">Our Work</a>
+<a href="get-involved.html" class="active">Get Involved</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="page-hero">
+
+<p class="eyebrow">JOIN THE MOVEMENT</p>
+
+<h1>Get Involved</h1>
+
+<p>
+Whether you would like to volunteer, partner with us,
+request support or support our work, we would love to hear from you.
+</p>
+
+</section>
+
+
+<section class="combined-contact-section">
+
+<div class="request-form-container">
+
+<form id="getInvolvedForm"
+action="https://formspree.io/f/xljdjdrp"
+method="POST">
+
+
+<div class="form-group">
+
+<label for="name">
+Full Name *
+</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+autocomplete="name"
+required>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="email">
+Email Address *
+</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter your email address"
+autocomplete="email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">
+Phone Number
+</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+placeholder="Enter your phone number"
+autocomplete="tel">
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="requestType">
+What would you like to do? *
+</label>
+
+<select
+id="requestType"
+name="request_type"
+required>
+
+<option value="" disabled selected>
+Please select an option
+</option>
+
+<option value="Request Support">
+Request Support
+</option>
+
+<option value="Volunteer">
+Volunteer With Us
+</option>
+
+<option value="Partnership">
+Partner With Us
+</option>
+
+<option value="Donation">
+Support / Donate
+</option>
+
+<option value="Community Programme">
+Community Programme Enquiry
+</option>
+
+<option value="Health Talk">
+Request a Health Talk
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">
+Your Request *
+</label>
+
+<textarea
+id="message"
+name="message"
+rows="6"
+placeholder="Please tell us how we can help or how you would like to get involved..."
+required></textarea>
+
+</div>
+
+
+<div class="form-consent">
+
+<label>
+
+<input
+type="checkbox"
+name="consent"
+value="I agree that Bloom & Thrive Foundation may use the information I provide to respond to my request."
+required>
+
+<span>
+I agree that Bloom & Thrive Foundation may use the information
+I provide to respond to my request.
+</span>
+
+</label>
+
+</div>
+
+
+<button
+type="submit"
+class="request-submit-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+Submit Request
+
+</button>
+
+</form>
+
+
+<div
+id="formSuccess"
+class="form-success"
+style="display:none;">
+
+<div class="success-icon">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+
+<h3>Request Submitted!</h3>
+
+<p>
+Thank you for contacting Bloom & Thrive Foundation.
+We have received your request and someone from our team
+will get back to you as soon as possible.
+</p>
+
+<button
+type="button"
+onclick="resetRequestForm()"
+class="submit-another-btn">
+
+Submit Another Request
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-info">
+
+<strong>Bloom & Thrive Foundation</strong>
+
+<p>
+Registration No.: CG055120826<br>
+TIN: C0067796532<br>
+House No. 77 (GT-077-8972)<br>
+Ejuanema Ln, Near Lynx Graphix<br>
+Tema Community 7, Tema<br>
+Greater Accra, Ghana
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="programmes.html">Programmes</a>
+<a href="our-work.html">Our Work</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<p class="copyright">
+© 2026 Bloom & Thrive Foundation. All rights reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const getInvolvedForm =
+document.getElementById("getInvolvedForm");
+
+const formSuccess =
+document.getElementById("formSuccess");
+
+
+getInvolvedForm.addEventListener(
+"submit",
+async function(event) {
+
+event.preventDefault();
+
+const submitButton =
+getInvolvedForm.querySelector(
+".request-submit-btn"
+);
+
+submitButton.disabled = true;
+
+submitButton.innerHTML =
+'<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+const formData =
+new FormData(getInvolvedForm);
+
+try {
+
+const response =
+await fetch(
+getInvolvedForm.action,
+{
+method: "POST",
+body: formData,
+headers: {
+"Accept": "application/json"
+}
+}
+);
+
+if (response.ok) {
+
+getInvolvedForm.style.display = "none";
+
+formSuccess.style.display = "block";
+
+formSuccess.scrollIntoView({
+behavior: "smooth",
+block: "center"
+});
+
+} else {
+
+alert(
+"There was a problem submitting your request. Please try again."
+);
+
+submitButton.disabled = false;
+
+submitButton.innerHTML =
+'<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+}
+
+} catch (error) {
+
+alert(
+"There was a problem submitting your request. Please check your internet connection and try again."
+);
+
+submitButton.disabled = false;
+
+submitButton.innerHTML =
+'<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+}
+
+});
+
+
+function resetRequestForm() {
+
+getInvolvedForm.reset();
+
+formSuccess.style.display = "none";
+
+getInvolvedForm.style.display = "block";
+
+const submitButton =
+getInvolvedForm.querySelector(
+".request-submit-btn"
+);
+
+submitButton.disabled = false;
+
+submitButton.innerHTML =
+'<i class="fa-solid fa-paper-plane"></i> Submit Request';
+
+getInvolvedForm.scrollIntoView({
+behavior: "smooth",
+block: "center"
+});
+
+}
+
+</script>
+
+</body>
+</html>
