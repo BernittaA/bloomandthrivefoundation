@@ -62,7 +62,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #d81b60;
+  color: #6f8f68;
 }
 
 .hero {
@@ -72,7 +72,9 @@ nav a.active {
   grid-template-columns: 1.2fr .8fr;
   gap: 70px;
   align-items: center;
-  background: #faf5f7;
+
+  /* Soft sage background */
+  background: #f3f7f1;
 }
 
 .hero h1,
@@ -92,7 +94,7 @@ nav a.active {
 }
 
 .eyebrow {
-  color: #d81b60;
+  color: #6f8f68;
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 13px;
@@ -145,19 +147,19 @@ section h2 {
 }
 
 .box {
-  background: #faf5f7;
+  background: #e3eee0;
   padding: 35px;
   border-radius: 20px;
 }
 
 .text-link {
-  color: #d81b60;
+  color: #6f8f68;
   text-decoration: none;
   font-weight: bold;
 }
 
 .pale {
-  background: #faf5f7;
+  background: #f3f7f1;
 }
 
 .cards {
@@ -191,14 +193,14 @@ section h2 {
 }
 
 .audience span {
-  background: #faf5f7;
+  background: #e3eee0;
   padding: 12px 20px;
   border-radius: 30px;
 }
 
 .cta-section {
   text-align: center;
-  background: #faf5f7;
+  background: #f3f7f1;
 }
 
 .cta-section p {
@@ -209,7 +211,7 @@ section h2 {
 .page-hero {
   padding: 90px 7%;
   text-align: center;
-  background: #faf5f7;
+  background: #e3eee0;
 }
 
 .page-hero h1 {
@@ -243,7 +245,7 @@ section h2 {
 }
 
 .founder-subtitle {
-  color: #d81b60;
+  color: #6f8f68;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -261,7 +263,7 @@ section h2 {
 }
 
 .founder-quote {
-  border-left: 4px solid #d81b60;
+  border-left: 4px solid #6f8f68;
   padding-left: 20px;
   font-style: italic;
   margin: 30px 0;
@@ -275,7 +277,7 @@ section h2 {
 }
 
 .values div {
-  background: #faf5f7;
+  background: #e3eee0;
   padding: 25px;
   border-radius: 18px;
 }
@@ -301,7 +303,7 @@ section h2 {
 }
 
 .programme-card span {
-  color: #d81b60;
+  color: #6f8f68;
   font-weight: bold;
 }
 
@@ -372,7 +374,7 @@ section h2 {
 }
 
 .combined-contact-section {
-  background: #faf5f7;
+  background: #e3eee0;
   text-align: center;
 }
 
@@ -432,7 +434,7 @@ section h2 {
 
 .form-consent input {
   margin-top: 3px;
-  accent-color: #d81b60;
+  accent-color: #6f8f68;
 }
 
 .request-submit-btn {
@@ -454,7 +456,7 @@ section h2 {
 
 .success-icon {
   font-size: 58px;
-  color: #d81b60;
+  color: #6f8f68;
 }
 
 .form-success h3 {
@@ -488,7 +490,7 @@ section h2 {
 
 .contact-icon {
   font-size: 35px;
-  color: #d81b60;
+  color: #6f8f68;
 }
 
 .email-link {
@@ -520,7 +522,7 @@ section h2 {
 }
 
 .social-icon:hover {
-  background: #d81b60;
+  background: #6f8f68;
   color: #fff;
 }
 
